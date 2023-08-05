@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Subtraçao</title>
+    <script type="text/javascript" src="js/jquery-3.7.0.min.js"></script>
+    <script>
+// o codigo abaixo pega os valores inseridos no form, e subtrai eles!
+
+        $(document).ready(function(){
+
+            $("#btnsubtrair").click(function(){
+
+
+                var primeirovalor = parseFloat($("#numero1").val());
+                var segundovalor = parseFloat($("#numero2").val());
+                var resultado = primeirovalor - segundovalor;
+
+                window.alert(`${resultado}`);
+
+
+            })
+
+
+
+        });
+
+    </script>
+</head>
+<body>
+    <h1>Calculadora Subtraçao</h1>
+    <br><br>
+    <form name="subtraçao">
+        <label>Primeiro valor:</label>
+        <input type="textbox" id="numero1">
+        <br><br>
+        <label>Segundo valor:</label>
+        <input type="textbox" id="numero2">
+        <br><br>
+        <button id="btnsubtrair">Subtrair</button>
+
+
+    </form>
+
+</body>
+</html>

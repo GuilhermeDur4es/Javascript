@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Calculadora Soma</title>
+    
+    <script type="text/javascript" src="js/jquery-3.7.0.min.js"></script>
+    
+
+<script>
+// o codigo abaixo faz a soma ds valores inseridos no form
+
+
+$(document).ready(function(){
+
+
+$("#btnsomar").click(function(){
+
+    var numero1 =parseInt( $("#valor1").val());
+
+    var numero2 = parseInt($("#valor2").val());
+
+    var resultado = numero1 + numero2;
+
+    window.alert(`${resultado}`);
+});
+
+
+})
+
+
+
+</script>
+
+
+
+
+</head>
+<body>
+    <h1>Ex Soma usando Jquery!</h1>
+    <br><br>
+    <form name="soma">
+
+        <label>Valor:</label>
+            <input type="textbox" id="valor1">
+
+            <br><br>
+        <label>Valor:</label>
+            <input type="textbox" id="valor2">
+            <br><br>
+    <button id="btnsomar">
+        Somar
+    </button>
+<div id="resultado">
+
+</div>
+    </form>
+</body>
+</html>
