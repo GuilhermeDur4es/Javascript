@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Divisão Jquery!</title>
+    <script type="text/javascript" src="js/jquery-3.7.0.min.js"></script>
+    <script>
+//o codigo abaixo pega os numeros inseridos no form pelo usuario e depois divide-os!
+
+$(document).ready(function(){
+
+    $("#resultado").click(function(){
+
+
+        var Dividendo = parseFloat($("#nmr1").val());
+        var Divisor = parseFloat($("#nmr2").val());
+        var resultado = Dividendo/Divisor;
+
+        window.alert(`${resultado}`);
+
+    });
+
+
+
+});
+
+    </script>
+</head>
+<body>
+    <h1>Calculadora Divisao</h1>
+
+    <form name="divisao">
+        <label>Dividendo:</label>
+        <input type="textbox" id="nmr1">
+        <br><br>
+        <label>Divisor:</label>
+        <input type="textbox" id="nmr2">
+        <br><br>
+        <button id="resultado">Dividir</button>
+
+
+    </form>
+</body>
+</html>
