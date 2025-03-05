@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JS basico - Semana 4</title>
+
+</head>
+<body>
+    <h1>Curso JS basico - Semana 4</h1>    
+    <script>
+        function buscarCEP(){
+            // Coletando os dados, e colando o CEP digitado na url:
+            let cep = prompt("Digite o CEP que desejas buscar: ")
+            let url = "https://brasilapi.com.br/api/cep/v2/"+cep;
+            
+            // Buscando no servidor, e exibindo os dados para o usuario: 
+            fetch(url)
+            .then(function(resposta){
+                resposta.json().then(function(dados){
+                  
+                    alert("Sua cidade é: "+dados.city+" no bairro de: "+dados.neighborhood+" na rua: "+ dados.street);
+                })
+            })
+            .catch(function(erro){
+                console.log("Ocorreu um erro ao buscar os dados.");
+            });
+        }
+        buscarCEP();
+    </script>
+</body>
+</html>
